@@ -1,0 +1,46 @@
+from tkinter import *
+gui = Tk()
+
+l = Label(gui)
+
+L1 = Label(gui, text='First Number')
+L1.pack( side = LEFT)
+E1 = Entry(gui, bd =5)
+E1.pack(side = LEFT)
+L2 = Label(gui, text='Second Number')
+L2.pack( side = LEFT)
+E2 = Entry(gui, bd =5)
+E2.pack(side = LEFT)
+
+def add():
+    addt = int(E1.get())+int(E2.get())
+    l.config(text="Answer = %s" % addt)
+    l.pack(side = LEFT)
+b = Button(gui, text="add Them", command=add)
+
+
+def sub():
+    subt = int(E1.get())-int(E2.get())
+    l.config(text="Answer = %s" % subt)
+    l.pack(side = LEFT)
+b1 = Button(gui, text="sub Them", command=sub)
+
+def mul():
+    mult = int(E1.get())*int(E2.get())
+    l.config(text="Answer = %s" % mult)
+    l.pack(side = LEFT)
+b2 = Button(gui, text="mul Them", command=mul)
+def div():
+    divt = int(E1.get())/int(E2.get())
+    l.config(text="Answer = %s" % divt)
+    l.pack(side = LEFT)
+b3 = Button(gui, text="Dived Them", command=div)
+for widget in (E1, E2, l, b,b1,b2,b3):
+    widget.pack()
+gui.mainloop()
+
+
+
+
+
+
